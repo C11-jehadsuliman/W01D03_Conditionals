@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title></title>
+  </head>
+
+  <body>
+    <img src="https://svgshare.com/i/ihL.svg" style="width: 300px;" />
+    <h1 id="title" style="text-align: center; margin-top: 50px;"></h1>
+    <h3 style="margin-left: 18px;">Steps Todo</h3>
+    <ol>
+      <li>Create a new directory for the day's lecture</li>
+      <li>Find the lecture name in the student sheet (S1-Homeworks)</li>
+      <li>Take a copy of (index.html, main.js) from the starter-code folder</li>
+      <li>Paste the files into the new folder that you have created</li>
+      <li>Start work on the exercise</li>
+    </ol>
+
+    <script>
+      const currentDirectory = window.location.pathname.split("/");
+      const pageTitle = currentDirectory[currentDirectory.length - 2];
+      document.title = pageTitle;
+      const arrowTitle = "===> " + "Practice: " + pageTitle + " <===";
+      document.querySelector("#title").innerText = arrowTitle;
+      console.log(arrowTitle);
+    </script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
